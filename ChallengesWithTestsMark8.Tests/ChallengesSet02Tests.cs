@@ -126,7 +126,7 @@ namespace ChallengesWithTestsMark8.Tests
         [InlineData(new double[] { -15.5, 1, -5, 8 }, -7.5)]
         [InlineData(new double[] { -2.7, 0, -2.3, 12, 9 }, 9.3)]
         [InlineData(new double[] { 0, 0, 0 }, 0)]
-        [InlineData(new double[] { -1, 1 }, 0)]
+        [InlineData(null, 0)]
         public void SumOfMinAndMax(IEnumerable<double> numbers, double expected)
         {
             // Arrange
@@ -165,7 +165,7 @@ namespace ChallengesWithTestsMark8.Tests
         [InlineData(new int[] { 1, -2, 3, -4, 5 }, 3)]
         [InlineData(new int[] { 0, 0, 0 }, 0)]
         [InlineData(new int[] { }, 0)]
-        [InlineData(new int[] { -1, 1 }, 0)]
+        [InlineData(null, 0)]
         public void Sum(int[] numbers, int expected)
         {
             // Arrange
@@ -188,7 +188,7 @@ namespace ChallengesWithTestsMark8.Tests
         [InlineData(new int[] { 0, 2, 0 }, 2)]
         [InlineData(new int[] { 1, 1, 1, 3, 3, 5, 5, 5, 5, 7 }, 0)]
         [InlineData(new int[] { }, 0)]
-        [InlineData(new int[] {0}, 0)]
+        [InlineData(null, 0)]
         public void SumEvens(int[] numbers, int expected)
         {
             // Arrange
@@ -212,7 +212,7 @@ namespace ChallengesWithTestsMark8.Tests
         [InlineData(new int[] { 10, 10, 10, 10 }, false)]
         [InlineData(new int[] { 0, 1, 0 }, true)]
         [InlineData(new int[] { }, false)]
-        [InlineData(new int[] {2}, false)]
+        [InlineData(null, false)]
         public void IsSumOdd(int[] numbers, bool expected)
         {
             // Arrange

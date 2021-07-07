@@ -43,24 +43,35 @@ namespace ChallengesWithTestsMark8
 
         public double SumOfMinAndMax(IEnumerable<double> numbers)
         {
+            if (numbers == null || numbers.Count() == 0)
+            {
+                return 0;
+            }
             return numbers.Max() + numbers.Min();
         }
 
         public int GetLengthOfShortestString(string str1, string str2)
         {
-            
+            return str1.Length < str2.Length ? str1.Length : str2.Length;
         }
 
         public int Sum(int[] numbers)
         {
+            if (numbers == null)
+            {
+                return 0;
+            }
             var sum = numbers.Sum();
             return sum;
         }
 
         public int SumEvens(int[] numbers)
         {
-            return numbers.Where(x => x % 2 == 0).Sum();
-                    
+            if (numbers == null)
+            {
+                return 0;
+            }    
+            return numbers.Where(x => x % 2 == 0).Sum();        
         }
 
         public bool IsSumOdd(List<int> numbers)
@@ -74,7 +85,11 @@ namespace ChallengesWithTestsMark8
 
         public long CountOfPositiveOddsBelowNumber(long number)
         {
-            return 9;
+            if (number < 0)
+            {
+                return 0;
+            }
+            return number / 2;
         }
     }
 }
